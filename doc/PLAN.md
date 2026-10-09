@@ -11,7 +11,7 @@
 ## Part 1: Plan and Frontend Inventory
 
 - [ ] Review the root project requirements.
-- [ ] Review the existing frontend application, test setup, and board behavior.
+- [ ] Review the existing frontend application, test setup, and current behavior.
 - [ ] Create `frontend/AGENTS.md` documenting the existing frontend structure and conventions.
 - [ ] Expand this document into implementation checklists, test expectations, and success criteria.
 - [ ] Obtain formal user approval of this plan before starting Part 2.
@@ -53,12 +53,12 @@
 - [ ] Update Docker build stages to install frontend dependencies, create the static export, and copy only the built assets to the runtime image.
 - [ ] Replace the temporary root page with the existing [project name] application.
 - [ ] Configure FastAPI static serving and fallback behavior required by the exported frontend.
-- [ ] Preserve the existing board's five columns, renaming, card creation/deletion, and drag/drop behavior.
+- [ ] Preserve the existing frontend's features and interactive behavior.
 
 ### Tests
 
 - [ ] Run existing frontend unit tests.
-- [ ] Run existing Playwright board tests against the container-served application.
+- [ ] Run existing Playwright tests against the container-served application.
 - [ ] Add an integration check that `/` is served by FastAPI and displays the [project name] heading.
 
 ### Success Criteria
@@ -71,7 +71,7 @@
 - [ ] Define a minimal server-managed authentication mechanism suitable for the local MVP.
 - [ ] Implement a login endpoint accepting only `user` and `password`.
 - [ ] Store authenticated state in a secure session mechanism; do not place the password in frontend code or storage.
-- [ ] Gate board routes and board API access behind authentication.
+- [ ] Gate application routes and API access behind authentication.
 - [ ] Add a login view matching the existing visual language.
 - [ ] Add logout and return the user to the login view.
 - [ ] Preserve [project name] data for the authenticated browser session (originally in memory; superseded by [DB type] persistence in Part 6).
@@ -80,21 +80,21 @@
 
 - [ ] Backend unit tests for successful login, rejected credentials, authenticated access, unauthenticated rejection, and logout.
 - [ ] Frontend tests for login form validation and logout controls.
-- [ ] Playwright flow for login, board visibility, logout, and protected-route behavior.
-- [ ] Playwright test that board changes survive a page reload within the browser session.
+- [ ] Playwright flow for login, application visibility, logout, and protected-route behavior.
+- [ ] Playwright test that data changes survive a page reload within the browser session.
 
 ### Success Criteria
 
 - Visiting `/` while unauthenticated presents login.
-- `user` / `password` grants access to the board.
-- Logout removes board access until the user logs in again.
-- Board changes remain available after a reload and re-login through [DB type] persistence.
+- `user` / `password` grants access to the application.
+- Logout removes application access until the user logs in again.
+- Data changes remain available after a reload and re-login through [DB type] persistence.
 
 ## Part 5: Database Design Approval
 
-- [ ] Propose a [DB type] schema supporting multiple users and one board per user.
-- [ ] Model board columns, cards, ordering, and timestamps needed for persistent edits.
-- [ ] Define how the initial board is created for a new user.
+- [ ] Propose a [DB type] schema supporting multiple users, each owning their own data.
+- [ ] Model the application's core entities, relationships, ordering, and timestamps needed for persistent edits.
+- [ ] Define how initial seed data is created for a new user.
 - [ ] Define JSON representations used by the API and AI features.
 - [ ] Document schema, migration/initialization approach, constraints, and example payloads in `docs/`.
 - [ ] Obtain formal user approval before implementing persistence.
@@ -102,7 +102,7 @@
 ### Tests
 
 - Validate proposed example JSON against the documented API model.
-- Review schema constraints against one-board-per-user and ordered-column/card requirements.
+- Review schema constraints against data-ownership and ordering requirements.
 - Define Part 6 tests that prove plaintext passwords are neither persisted, logged, nor returned, and that password hashes verify securely.
 
 ### Success Criteria
