@@ -25,13 +25,13 @@
 - This plan has formal user approval.
 - The frontend-specific instructions accurately describe the existing demo and its tests.
 
-## Part 2: Docker, FastAPI, and Local Scripts
+## Part 2: [container], [middleware], and Local Scripts
 
 - [ ] Inspect backend and script-specific instructions before making changes in those directories.
-- [ ] Create the Python project metadata for `uv` and FastAPI in `backend/`.
-- [ ] Implement a minimal FastAPI application with a health endpoint and an example API endpoint.
+- [ ] Create the [programming language] project metadata for [dependency manager] and [middleware] in `backend/`.
+- [ ] Implement a minimal [middleware] application with a health endpoint and an example API endpoint.
 - [ ] Configure the backend to serve a temporary static hello-world page at `/`.
-- [ ] Create a Dockerfile and Docker configuration that install Python dependencies with `uv` and expose the application port.
+- [ ] Create a [container] configuration that installs [programming language] dependencies with [dependency manager] and exposes the application port.
 - [ ] Add documented start and stop scripts for Windows, macOS, and Linux in `scripts/`.
 - [ ] Ensure scripts load root `.env` values without exposing them in output.
 
@@ -43,27 +43,27 @@
 
 ### Success Criteria
 
-- A single Docker container starts locally using the platform-appropriate script.
+- A single [container] instance starts locally using the platform-appropriate script.
 - `/` returns the temporary static page and the API endpoint responds successfully.
 - The container can be stopped by the corresponding stop script.
 
 ## Part 3: Serve the Existing Frontend
 
-- [ ] Configure Next.js for a static production export compatible with FastAPI static-file serving.
-- [ ] Update Docker build stages to install frontend dependencies, create the static export, and copy only the built assets to the runtime image.
+- [ ] Configure Next.js for a static production export compatible with [middleware] static-file serving.
+- [ ] Update [container] build stages to install frontend dependencies, create the static export, and copy only the built assets to the runtime image.
 - [ ] Replace the temporary root page with the existing [project name] application.
-- [ ] Configure FastAPI static serving and fallback behavior required by the exported frontend.
+- [ ] Configure [middleware] static serving and fallback behavior required by the exported frontend.
 - [ ] Preserve the existing frontend's features and interactive behavior.
 
 ### Tests
 
 - [ ] Run existing frontend unit tests.
 - [ ] Run existing Playwright tests against the container-served application.
-- [ ] Add an integration check that `/` is served by FastAPI and displays the [project name] heading.
+- [ ] Add an integration check that `/` is served by [middleware] and displays the [project name] heading.
 
 ### Success Criteria
 
-- The Docker-served root route displays the existing [project name] demo.
+- The [container]-served root route displays the existing [project name] demo.
 - All existing frontend unit and end-to-end behavior passes in the packaged application.
 
 ## Part 4: MVP Authentication
@@ -155,7 +155,7 @@
 
 ## Part 8: OpenRouter Connectivity
 
-- [ ] Decision: validate connectivity with an explicit, live OpenRouter request rather than mocked HTTP tests. The smoke test must run in Docker and send `2+2` to the configured model.
+- [ ] Decision: validate connectivity with an explicit, live OpenRouter request rather than mocked HTTP tests. The smoke test must run in [container] and send `2+2` to the configured model.
 - [ ] Add backend-only OpenRouter configuration using `OPENROUTER_API_KEY` and a configured model.
 - [ ] Implement an OpenRouter client with timeouts and actionable error handling.
 - [ ] Add an opt-in manual smoke-test command that sends `2+2` to OpenRouter and reports the response without printing credentials.
@@ -209,4 +209,4 @@
 
 - A signed-in user can hold a chat conversation from the application workspace.
 - Valid AI changes are visible in the UI immediately after the response.
-- The completed application runs locally in Docker and all automated checks pass without live AI calls.
+- The completed application runs locally in [container] and all automated checks pass without live AI calls.
