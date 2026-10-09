@@ -26,5 +26,5 @@ MVP
 
 ## Working documentation
 
-All documents for planning and executing this project will be in the docs/ directory.
-Please review the docs/PLAN.md document before proceeding.
+All documents for planning and executing this project will be in the doc/ directory.
+Please review the doc/PLAN.md document before proceeding.
