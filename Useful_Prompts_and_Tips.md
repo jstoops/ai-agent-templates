@@ -10,15 +10,15 @@ Add test coverage before making changes or upgrading an app:
 
 Then:
 
-`Very good. Now check for any out of date dependencies, secuirity issues and vulnerabilities then fix them and validate all tests still pass after remediating all secuirty issues`
+`Very good. Now check for any out of date dependencies, security issues and vulnerabilities then fix them and validate all tests still pass after remediating all security issues`
 
 Code review:
 
 `Please carry out a comprehensive code review of the entire repo, and write a report with actions to code_review.md in the docs folder`
 
-Or secuirty code review:
+Or security code review:
 
-`Please carry out a comprehensive secuirty code review of the entire repo, and write a report with actions to code_review.md in the docs folder prioritizing by criticallity`
+`Please carry out a comprehensive security code review of the entire repo, and write a report with actions to code_review.md in the docs folder prioritizing by criticality`
 
 Then:
 
@@ -31,7 +31,7 @@ Then:
 - **Guide with debug.md** - Guide it through, giving it these instructions
 	1. **Reproduce consistently:** ask it to reproduce the issue & document it, e.g. in debug.md.
 	2. **Investigate, hypothesis:** tell it to look at all the related logs, put in extra logging info, get all the info you can, investigate deeply, come up with hypothesis for what could be causing this, & document them in debug.md or whatever.md.
-		- Include in that doing a web search for other people that have has these problems.
+		- Include in that doing a web search for other people that have had these problems.
 		- Validate any reported GitHub or Stack Overflow issues it says matches the problem it's found, especially if it says "this is a known problem" - red flag! - isn't a one-off reported by one person many years ago that can't be the same issue.
 		- Sanity check: just because you found one other recorded instance of this issue: do you have evidence that this is a common issue? Did more than one person report it? Does it really seem like this is the same issue we're encountering?
 		- Challenge it hard, don't jump to conclusions.
