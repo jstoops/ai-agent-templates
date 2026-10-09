@@ -26,7 +26,7 @@ Each template has the same sections: **Business Requirements**, **Limitations**,
 
 | File | Purpose |
 | --- | --- |
-| [`doc/PLAN.md`](doc/PLAN.md) | Ten-part MVP delivery plan (frontend inventory, Docker/FastAPI, auth, database design, persistence, OpenRouter AI chat) with checklists, tests, and success criteria. Uses `[project name]` and `[DB type]` placeholders. |
+| [`doc/PLAN.md`](doc/PLAN.md) | Ten-part MVP delivery plan (frontend inventory, containerized backend, auth, database design, persistence, AI chat) with checklists, tests, and success criteria. Uses placeholders such as `[project name]`, `[DB type]`, `[programming language]`, `[middleware]`, `[container]`, and `[AI provider]` for project and technology choices. |
 
 ### Reference notes
 
