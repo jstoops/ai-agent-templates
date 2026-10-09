@@ -16,7 +16,7 @@ Each template has the same sections: **Business Requirements**, **Limitations**,
 
 | File | Stack | Example app |
 | --- | --- | --- |
-| `template_AGENT.md` | Blank | Empty skeleton with coding standards and a pointer to [`doc/PLAN.md`](doc/PLAN.md) |
+| `template_AGENT.md` | Blank | Empty skeleton with coding standards and a pointer to [`docs/PLAN.md`](docs/PLAN.md) |
 | `web_app_NextJS_python_model_AGENT.md` | Next.js, FastAPI, SQLite, Docker, `uv`, OpenRouter | App with accounts and an AI chat sidebar |
 | `web_app_NextJS+Auth_React_Tailwind_Mongo_AGENT.md` | Next.js App Router (JS), NextAuth (Google), Tailwind, MongoDB/Mongoose, Cloudinary, Mapbox, Jest | Rental property listings |
 | `web_app_NextJS+Auth_React_ShadCN_PostgreSQL_TS_Zod_AGENT.md` | Next.js App Router (TS), NextAuth v5, ShadCN, Prisma/PostgreSQL (Neon), Zod, PayPal, Stripe, Uploadthing, Resend, Jest | E-commerce store |
@@ -26,7 +26,7 @@ Each template has the same sections: **Business Requirements**, **Limitations**,
 
 | File | Purpose |
 | --- | --- |
-| [`doc/PLAN.md`](doc/PLAN.md) | Ten-part MVP delivery plan (frontend inventory, containerized backend, auth, database design, persistence, AI chat) with checklists, tests, and success criteria. Uses placeholders such as `[project name]`, `[DB type]`, `[programming language]`, `[middleware]`, `[container]`, and `[AI provider]` for project and technology choices. |
+| [`docs/PLAN.md`](docs/PLAN.md) | Ten-part MVP delivery plan (frontend inventory, containerized backend, auth, database design, persistence, AI chat) with checklists, tests, and success criteria. Uses placeholders such as `[project name]`, `[DB type]`, `[programming language]`, `[middleware]`, `[container]`, and `[AI provider]` for project and technology choices. |
 
 ### Reference notes
 
@@ -40,4 +40,4 @@ Each template has the same sections: **Business Requirements**, **Limitations**,
 1. Copy `root_AGENT.md` into your agent's global instructions file (for Claude Code, `~/.claude/CLAUDE.md`).
 2. Copy the closest project template into the root of a new project as `CLAUDE.md` or `AGENTS.md`.
 3. Replace `[project name]`, then edit the requirements, limitations, and technical decisions to match your project.
-4. If you use `template_AGENT.md`, copy [`doc/PLAN.md`](doc/PLAN.md) into the project's `doc/` folder and fill in its placeholders before asking the agent to start.
+4. If you use `template_AGENT.md`, copy [`docs/PLAN.md`](docs/PLAN.md) into the project's `docs/` folder and fill in its placeholders before asking the agent to start.

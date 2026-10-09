@@ -96,7 +96,7 @@
 - [ ] Model the application's core entities, relationships, ordering, and timestamps needed for persistent edits.
 - [ ] Define how initial seed data is created for a new user.
 - [ ] Define JSON representations used by the API and AI features.
-- [ ] Document schema, migration/initialization approach, constraints, and example payloads in `doc/`.
+- [ ] Document schema, migration/initialization approach, constraints, and example payloads in `docs/`.
 - [ ] Obtain formal user approval before implementing persistence.
 
 ### Tests
