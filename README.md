@@ -22,6 +22,12 @@ Each template has the same sections: **Business Requirements**, **Limitations**,
 | `web_app_NextJS+Auth_React_ShadCN_PostgreSQL_TS_Zod_AGENT.md` | Next.js App Router (TS), NextAuth v5, ShadCN, Prisma/PostgreSQL (Neon), Zod, PayPal, Stripe, Uploadthing, Resend, Jest | E-commerce store |
 | `web_app_MERN_Redux_Mongoose_JWT_BCrypt_Multer_AGENT.md` | MongoDB, Express, React (CRA), Redux Toolkit/RTK Query, JWT cookies, bcrypt, Multer, PayPal, React Bootstrap | E-commerce store |
 
+### Plan template
+
+| File | Purpose |
+| --- | --- |
+| [`doc/PLAN.md`](doc/PLAN.md) | Ten-part MVP delivery plan (frontend inventory, Docker/FastAPI, auth, database design, persistence, OpenRouter AI chat) with checklists, tests, and success criteria. Uses `[project name]` and `[DB type]` placeholders. |
+
 ### Reference notes
 
 | File | Purpose |
@@ -34,4 +40,4 @@ Each template has the same sections: **Business Requirements**, **Limitations**,
 1. Copy `root_AGENT.md` into your agent's global instructions file (for Claude Code, `~/.claude/CLAUDE.md`).
 2. Copy the closest project template into the root of a new project as `CLAUDE.md` or `AGENTS.md`.
 3. Replace `[project name]`, then edit the requirements, limitations, and technical decisions to match your project.
-4. If you use `template_AGENT.md`, create `docs/PLAN.md` before asking the agent to start.
+4. If you use `template_AGENT.md`, create `docs/PLAN.md` before asking the agent to start. You can start from [`doc/PLAN.md`](doc/PLAN.md).
