@@ -6,7 +6,7 @@
 - Do not begin Part 2 until the user formally approves this plan.
 - Do not begin Part 6 until the user formally approves the database design from Part 5.
 - Keep credentials and `.env` files out of source control and browser bundles.
-- Automated AI tests must mock OpenRouter HTTP responses. A separate opt-in manual smoke-test command will make the live `2+2` request.
+- Automated AI tests must mock [AI provider] HTTP responses. A separate opt-in manual smoke-test command will make the live `2+2` request.
 
 ## Part 1: Plan and Frontend Inventory
 
@@ -25,13 +25,13 @@
 - This plan has formal user approval.
 - The frontend-specific instructions accurately describe the existing demo and its tests.
 
-## Part 2: Docker, FastAPI, and Local Scripts
+## Part 2: [container], [middleware], and Local Scripts
 
 - [ ] Inspect backend and script-specific instructions before making changes in those directories.
-- [ ] Create the Python project metadata for `uv` and FastAPI in `backend/`.
-- [ ] Implement a minimal FastAPI application with a health endpoint and an example API endpoint.
+- [ ] Create the [programming language] project metadata for [dependency manager] and [middleware] in `backend/`.
+- [ ] Implement a minimal [middleware] application with a health endpoint and an example API endpoint.
 - [ ] Configure the backend to serve a temporary static hello-world page at `/`.
-- [ ] Create a Dockerfile and Docker configuration that install Python dependencies with `uv` and expose the application port.
+- [ ] Create a [container] configuration that installs [programming language] dependencies with [dependency manager] and exposes the application port.
 - [ ] Add documented start and stop scripts for Windows, macOS, and Linux in `scripts/`.
 - [ ] Ensure scripts load root `.env` values without exposing them in output.
 
@@ -43,27 +43,27 @@
 
 ### Success Criteria
 
-- A single Docker container starts locally using the platform-appropriate script.
+- A single [container] instance starts locally using the platform-appropriate script.
 - `/` returns the temporary static page and the API endpoint responds successfully.
 - The container can be stopped by the corresponding stop script.
 
 ## Part 3: Serve the Existing Frontend
 
-- [ ] Configure Next.js for a static production export compatible with FastAPI static-file serving.
-- [ ] Update Docker build stages to install frontend dependencies, create the static export, and copy only the built assets to the runtime image.
+- [ ] Configure [frontend framework] for a static production export compatible with [middleware] static-file serving.
+- [ ] Update [container] build stages to install frontend dependencies, create the static export, and copy only the built assets to the runtime image.
 - [ ] Replace the temporary root page with the existing [project name] application.
-- [ ] Configure FastAPI static serving and fallback behavior required by the exported frontend.
+- [ ] Configure [middleware] static serving and fallback behavior required by the exported frontend.
 - [ ] Preserve the existing frontend's features and interactive behavior.
 
 ### Tests
 
 - [ ] Run existing frontend unit tests.
-- [ ] Run existing Playwright tests against the container-served application.
-- [ ] Add an integration check that `/` is served by FastAPI and displays the [project name] heading.
+- [ ] Run existing [e2e test framework] tests against the container-served application.
+- [ ] Add an integration check that `/` is served by [middleware] and displays the [project name] heading.
 
 ### Success Criteria
 
-- The Docker-served root route displays the existing [project name] demo.
+- The [container]-served root route displays the existing [project name] demo.
 - All existing frontend unit and end-to-end behavior passes in the packaged application.
 
 ## Part 4: MVP Authentication
@@ -80,8 +80,8 @@
 
 - [ ] Backend unit tests for successful login, rejected credentials, authenticated access, unauthenticated rejection, and logout.
 - [ ] Frontend tests for login form validation and logout controls.
-- [ ] Playwright flow for login, application visibility, logout, and protected-route behavior.
-- [ ] Playwright test that data changes survive a page reload within the browser session.
+- [ ] [e2e test framework] flow for login, application visibility, logout, and protected-route behavior.
+- [ ] [e2e test framework] test that data changes survive a page reload within the browser session.
 
 ### Success Criteria
 
@@ -123,7 +123,7 @@
 - [ ] Unit tests using an isolated temporary [DB type] database for initialization and first-run seed data creation.
 - [ ] API tests for reads, create/update/delete, reordering, validation failures, and authentication boundaries.
 - [ ] Test that changes remain after a new application/database session.
-- [ ] Test that passwords are Argon2id-hashed before persistence and are never stored, returned, or logged as plaintext.
+- [ ] Test that passwords are hashed with [password hashing algorithm] before persistence and are never stored, returned, or logged as plaintext.
 - [ ] Test that the frontend does not retain passwords in browser storage; require HTTPS for non-local authentication traffic.
 
 ### Success Criteria
@@ -144,8 +144,8 @@
 
 - [ ] Frontend unit tests mock API responses for loading, successful mutation, and failure states.
 - [ ] Backend integration tests cover the API contract consumed by the UI.
-- [ ] Playwright tests verify that edits survive a reload.
-- [ ] Playwright regression tests cover ordering and other state-sensitive interactions persisting as intended.
+- [ ] [e2e test framework] tests verify that edits survive a reload.
+- [ ] [e2e test framework] regression tests cover ordering and other state-sensitive interactions persisting as intended.
 
 ### Success Criteria
 
@@ -153,24 +153,24 @@
 - The UI displays a clear, recoverable state when an API operation fails.
 - Interactive operations preserve the intended result after reload.
 
-## Part 8: OpenRouter Connectivity
+## Part 8: [AI provider] Connectivity
 
-- [ ] Decision: validate connectivity with an explicit, live OpenRouter request rather than mocked HTTP tests. The smoke test must run in Docker and send `2+2` to the configured model.
-- [ ] Add backend-only OpenRouter configuration using `OPENROUTER_API_KEY` and a configured model.
-- [ ] Implement an OpenRouter client with timeouts and actionable error handling.
-- [ ] Add an opt-in manual smoke-test command that sends `2+2` to OpenRouter and reports the response without printing credentials.
+- [ ] Decision: validate connectivity with an explicit, live [AI provider] request rather than mocked HTTP tests. The smoke test must run in [container] and send `2+2` to the configured model.
+- [ ] Add backend-only [AI provider] configuration using `[AI_API_KEY]` and a configured model.
+- [ ] Implement an [AI provider] client with timeouts and actionable error handling.
+- [ ] Add an opt-in manual smoke-test command that sends `2+2` to [AI provider] and reports the response without printing credentials.
 - [ ] Keep the smoke-test command separate from the normal automated test suite.
 
 ### Tests
 
-- [ ] The explicit smoke-test command makes a live request; it does not mock OpenRouter HTTP responses.
-- Windows: run `./scripts/smoke-openrouter.ps1`. macOS/Linux: run `./scripts/smoke-openrouter.sh`.
+- [ ] The explicit smoke-test command makes a live request; it does not mock [AI provider] HTTP responses.
+- Windows: run `./scripts/smoke-ai.ps1`. macOS/Linux: run `./scripts/smoke-ai.sh`.
 - [ ] Manual smoke test: with a valid root `.env`, the explicit command returns `4` from the configured model.
 
 ### Success Criteria
 
 - Automated tests run without network access or an API key.
-- The documented manual smoke-test command confirms live OpenRouter connectivity when intentionally invoked.
+- The documented manual smoke-test command confirms live [AI provider] connectivity when intentionally invoked.
 
 ## Part 9: AI Commands and Structured Output
 
@@ -182,7 +182,7 @@
 
 ### Tests
 
-- [ ] Mocked OpenRouter tests for conversational replies without updates, valid single updates, multiple updates, and malformed output.
+- [ ] Mocked [AI provider] tests for conversational replies without updates, valid single updates, multiple updates, and malformed output.
 - [ ] Database/API tests confirm valid AI updates persist atomically and invalid updates make no changes.
 - [ ] Test the request payload includes current application state and bounded history.
 
@@ -203,10 +203,10 @@
 
 - [ ] Component tests for message submission, loading, error, and assistant-response states.
 - [ ] Mocked integration tests for chat responses with and without data updates.
-- [ ] Playwright tests verify that an AI update is reflected in the UI without a manual reload.
+- [ ] [e2e test framework] tests verify that an AI update is reflected in the UI without a manual reload.
 
 ### Success Criteria
 
 - A signed-in user can hold a chat conversation from the application workspace.
 - Valid AI changes are visible in the UI immediately after the response.
-- The completed application runs locally in Docker and all automated checks pass without live AI calls.
+- The completed application runs locally in [container] and all automated checks pass without live AI calls.
