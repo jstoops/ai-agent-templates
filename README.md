@@ -8,7 +8,7 @@ Reusable instruction files for AI coding agents (Claude Code, Codex, Cursor, and
 
 | File | Purpose |
 | --- | --- |
-| `root_AGENT.md` | General rules for every project: work in small validated steps, use the latest APIs, don't overengineer, find the root cause before fixing anything, use `uv` for Python, no emojis. |
+| `agent-templates/root_AGENT.md` | General rules for every project: work in small validated steps, use the latest APIs, don't overengineer, find the root cause before fixing anything, use `uv` for Python, no emojis. |
 
 ### Project templates
 
@@ -16,11 +16,11 @@ Each template has the same sections: **Business Requirements**, **Limitations**,
 
 | File | Stack | Example app |
 | --- | --- | --- |
-| `template_AGENT.md` | Blank | Empty skeleton with coding standards and pointers to [`docs/PLAN.md`](docs/PLAN.md) and [`docs/multi_agent_PLAN.md`](docs/multi_agent_PLAN.md) |
-| `web_app_NextJS_python_model_AGENT.md` | Next.js, FastAPI, SQLite, Docker, `uv`, OpenRouter | App with accounts and an AI chat sidebar |
-| `web_app_NextJS+Auth_React_Tailwind_Mongo_AGENT.md` | Next.js App Router (JS), NextAuth (Google), Tailwind, MongoDB/Mongoose, Cloudinary, Mapbox, Jest | Rental property listings |
-| `web_app_NextJS+Auth_React_ShadCN_PostgreSQL_TS_Zod_AGENT.md` | Next.js App Router (TS), NextAuth v5, ShadCN, Prisma/PostgreSQL (Neon), Zod, PayPal, Stripe, Uploadthing, Resend, Jest | E-commerce store |
-| `web_app_MERN_Redux_Mongoose_JWT_BCrypt_Multer_AGENT.md` | MongoDB, Express, React (CRA), Redux Toolkit/RTK Query, JWT cookies, bcrypt, Multer, PayPal, React Bootstrap | E-commerce store |
+| `agent-templates/template_AGENT.md` | Blank | Empty skeleton with coding standards and pointers to [`docs/PLAN.md`](docs/PLAN.md) and [`docs/multi_agent_PLAN.md`](docs/multi_agent_PLAN.md) |
+| `agent-templates/web_app_NextJS_python_model_AGENT.md` | Next.js, FastAPI, SQLite, Docker, `uv`, OpenRouter | App with accounts and an AI chat sidebar |
+| `agent-templates/web_app_NextJS+Auth_React_Tailwind_Mongo_AGENT.md` | Next.js App Router (JS), NextAuth (Google), Tailwind, MongoDB/Mongoose, Cloudinary, Mapbox, Jest | Rental property listings |
+| `agent-templates/web_app_NextJS+Auth_React_ShadCN_PostgreSQL_TS_Zod_AGENT.md` | Next.js App Router (TS), NextAuth v5, ShadCN, Prisma/PostgreSQL (Neon), Zod, PayPal, Stripe, Uploadthing, Resend, Jest | E-commerce store |
+| `agent-templates/web_app_MERN_Redux_Mongoose_JWT_BCrypt_Multer_AGENT.md` | MongoDB, Express, React (CRA), Redux Toolkit/RTK Query, JWT cookies, bcrypt, Multer, PayPal, React Bootstrap | E-commerce store |
 
 ### Plan template
 
@@ -38,7 +38,7 @@ Each template has the same sections: **Business Requirements**, **Limitations**,
 
 ## Usage
 
-1. Copy `root_AGENT.md` into your agent's global instructions file (for Claude Code, `~/.claude/CLAUDE.md`).
+1. Copy `agent-templates/root_AGENT.md` into your agent's global instructions file (for Claude Code, `~/.claude/CLAUDE.md`).
 2. Copy the closest project template into the root of a new project as `CLAUDE.md` or `AGENTS.md`.
 3. Replace `[project name]`, then edit the requirements, limitations, and technical decisions to match your project.
-4. If you use `template_AGENT.md`, copy [`docs/PLAN.md`](docs/PLAN.md) into the project's `docs/` folder and fill in its placeholders before asking the agent to start. If several agents will work on the project, instead use [`docs/multi_agent_PLAN.md`](docs/multi_agent_PLAN.md) and fill it in.
+4. If you use `agent-templates/template_AGENT.md`, copy [`docs/PLAN.md`](docs/PLAN.md) into the project's `docs/` folder and fill in its placeholders before asking the agent to start. If several agents will work on the project, instead use [`docs/multi_agent_PLAN.md`](docs/multi_agent_PLAN.md) and fill it in.
