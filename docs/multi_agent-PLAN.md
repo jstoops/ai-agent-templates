@@ -114,7 +114,8 @@ The user runs [start command or script]. [Where the app opens, e.g. `http://loca
 │       ├── [subsystem]/      # [what it contains]
 │       └── db/               # Schema, seed data, connection helpers
 ├── docs/                     # Project-wide documentation for agents
-│   ├── PLAN.md               # This document
+│   ├── PLAN.md               # Delivery plan
+│   ├── multi_agent-PLAN.md   # This document
 │   └── ...                   # Additional agent reference docs
 ├── scripts/                  # Start/stop scripts
 ├── test/                     # [e2e test framework] E2E tests and test infrastructure
