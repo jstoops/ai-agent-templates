@@ -32,3 +32,7 @@ MongoDB, Google OAuth, Cloudinary, Mapbox, and Google Geocoding credentials must
 - React Context (`context/GlobalContext.js`) for the unread message count
 - React PhotoSwipe Gallery for the image lightbox, React Toastify for notifications, React Spinners for loading, React Share for social sharing, React Icons for icons
 - Jest and React Testing Library in `__tests__/`, with `npm test` and `npm run test:coverage`; the coverage threshold is 100%
+
+## Coding Standards
+
+- Follow the coding standards and coding style in the [jstoops/next-property](https://github.com/jstoops/next-property) repo, and use its code as the example to match for structure, naming, and patterns
