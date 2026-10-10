@@ -26,7 +26,7 @@ Each template has the same sections: **Business Requirements**, **Limitations**,
 
 | File | Purpose |
 | --- | --- |
-| [`docs/PLAN.md`](docs/PLAN.md) | Ten-part MVP delivery plan (frontend inventory, containerized backend, auth, database design, persistence, AI chat) with checklists, tests, and success criteria. Uses placeholders such as `[project name]`, `[DB type]`, `[programming language]`, `[middleware]`, `[container]`, and `[AI provider]` for project and technology choices. |
+| [`docs/PLAN.md`](docs/PLAN.md) | Project specification template: vision, user experience, architecture, directory structure, environment variables, core subsystem, database, API, AI integration, frontend, deployment, and testing, with guidance on what to write in each section. Uses placeholders such as `[project name]`, `[DB type]`, `[programming language]`, `[middleware]`, `[container]`, and `[AI provider]` for project and technology choices. |
 
 ### Reference notes
 
@@ -40,4 +40,4 @@ Each template has the same sections: **Business Requirements**, **Limitations**,
 1. Copy `root_AGENT.md` into your agent's global instructions file (for Claude Code, `~/.claude/CLAUDE.md`).
 2. Copy the closest project template into the root of a new project as `CLAUDE.md` or `AGENTS.md`.
 3. Replace `[project name]`, then edit the requirements, limitations, and technical decisions to match your project.
-4. If you use `template_AGENT.md`, copy [`docs/PLAN.md`](docs/PLAN.md) into the project's `docs/` folder and fill in its placeholders before asking the agent to start.
+4. If you use `template_AGENT.md`, copy [`docs/PLAN.md`](docs/PLAN.md) into the project's `docs/` folder and fill in its placeholders and guidance sections before asking the agent to start.
