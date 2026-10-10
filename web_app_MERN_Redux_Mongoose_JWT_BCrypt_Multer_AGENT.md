@@ -38,3 +38,7 @@ MongoDB, `JWT_SECRET`, `PAGINATION_LIMIT`, and PayPal credentials must be suppli
 - React Router for routing, with `PrivateRoute` and `AdminRoute` wrappers; frontend pages are `screens/` and shared pieces are `components/`
 - React Bootstrap (with a custom Bootstrap theme) for UI, React Icons for icons, React Toastify for notifications, and React Helmet Async for page titles and meta tags
 - Backend tests use Node's built-in test runner with Supertest and `mongodb-memory-server` in `backend/tests/`; frontend tests use Jest and React Testing Library. `npm test` runs both, and `npm run test:backend` and `npm run test:frontend` run each one
+
+## Coding Standards
+
+- Follow the coding standards and coding style in the [jstoops/proshop](https://github.com/jstoops/proshop) repo, and use its code as the example to match for structure, naming, and patterns
