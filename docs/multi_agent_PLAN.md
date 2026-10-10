@@ -114,7 +114,6 @@ The user runs [start command or script]. [Where the app opens, e.g. `http://loca
 │       ├── [subsystem]/      # [what it contains]
 │       └── db/               # Schema, seed data, connection helpers
 ├── docs/                     # Project-wide documentation for agents
-│   ├── PLAN.md               # Delivery plan
 │   ├── multi_agent_PLAN.md   # This document
 │   └── ...                   # Additional agent reference docs
 ├── scripts/                  # Start/stop scripts

@@ -28,4 +28,4 @@ MVP
 
 All documents for planning and executing this project will be in the docs/ directory.
 Please review the docs/PLAN.md document before proceeding.
-If multiple agents are working on this project, also review docs/multi_agent_PLAN.md, the project specification all agents share, and follow it as the source of truth for architecture, interfaces, and ownership boundaries.
+If multiple agents are working on this project, review docs/multi_agent_PLAN.md instead: it is the project specification all agents share, and the source of truth for architecture, interfaces, and ownership boundaries.

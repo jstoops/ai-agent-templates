@@ -41,4 +41,4 @@ Each template has the same sections: **Business Requirements**, **Limitations**,
 1. Copy `root_AGENT.md` into your agent's global instructions file (for Claude Code, `~/.claude/CLAUDE.md`).
 2. Copy the closest project template into the root of a new project as `CLAUDE.md` or `AGENTS.md`.
 3. Replace `[project name]`, then edit the requirements, limitations, and technical decisions to match your project.
-4. If you use `template_AGENT.md`, copy [`docs/PLAN.md`](docs/PLAN.md) into the project's `docs/` folder and fill in its placeholders before asking the agent to start. If several agents will work on the project, also copy [`docs/multi_agent_PLAN.md`](docs/multi_agent_PLAN.md) and fill it in.
+4. If you use `template_AGENT.md`, copy [`docs/PLAN.md`](docs/PLAN.md) into the project's `docs/` folder and fill in its placeholders before asking the agent to start. If several agents will work on the project, instead use [`docs/multi_agent_PLAN.md`](docs/multi_agent_PLAN.md) and fill it in.
