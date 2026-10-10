@@ -4,6 +4,8 @@ Reusable instruction files for AI coding agents (Claude Code, Codex, Cursor, and
 
 ## Contents
 
+The [`agent-templates/`](agent-templates/) folder holds the agent instruction files: one global file (`root_AGENT.md`), a blank project skeleton (`template_AGENT.md`), and ready-made project templates for specific stacks (`web_app_*_AGENT.md`). Copy the ones you need into your agent's instruction file (for example `CLAUDE.md` or `AGENTS.md`). The [`docs/`](docs/) folder holds the plan templates, and the notes on prompts and tools are in the repo root.
+
 ### Global instructions
 
 | File | Purpose |
@@ -34,7 +36,7 @@ Each template has the same sections: **Business Requirements**, **Limitations**,
 | File | Purpose |
 | --- | --- |
 | `Useful_Prompts_and_Tips.md` | Prompts for fixing stubborn bugs, adding test coverage, dependency and security updates, and code reviews, plus a step-by-step debugging method. |
-| `tools.md` | Where to find MCP servers, skills, and Claude Code plugins, with a short list of useful ones. |
+| [`AI_Coding_Tools.md`](AI_Coding_Tools.md) | Where to find MCP servers, skills, and Claude Code plugins, with a short list of useful ones. |
 
 ## Usage
 
