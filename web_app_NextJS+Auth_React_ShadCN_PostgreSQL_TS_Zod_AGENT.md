@@ -38,3 +38,7 @@ The PostgreSQL database (Neon), PayPal, Stripe, Uploadthing, and Resend credenti
 - Recharts for the admin sales chart, Embla Carousel for the featured banner, `query-string` for building filter URLs, and `slugify` for product slugs
 - Configuration such as page size, payment methods, and roles lives in `lib/constants/index.ts` with `.env` overrides
 - Jest with `ts-jest` in `tests/`, with `npm test` and `npm run test:coverage` (run with `TZ=UTC`); coverage thresholds are 98% lines/statements, 95% functions, and 90% branches
+
+## Coding Standards
+
+- Follow the coding standards and coding style in the [jstoops/prostore](https://github.com/jstoops/prostore) repo, and use its code as the example to match for structure, naming, and patterns

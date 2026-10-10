@@ -12,7 +12,7 @@ Reusable instruction files for AI coding agents (Claude Code, Codex, Cursor, and
 
 ### Project templates
 
-Each template has the same sections: **Business Requirements**, **Limitations**, and **Technical Decisions**.
+Each template has the same sections: **Business Requirements**, **Limitations**, and **Technical Decisions**. The rental property and e-commerce templates also have a **Coding Standards** section that points to an example repo whose coding style the agent should match: [next-property](https://github.com/jstoops/next-property), [prostore](https://github.com/jstoops/prostore), and [proshop](https://github.com/jstoops/proshop) respectively.
 
 | File | Stack | Example app |
 | --- | --- | --- |
